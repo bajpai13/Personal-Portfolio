@@ -23,9 +23,42 @@ The demo video is provided with the code.
 
 ### Overview
 
+### Frontend
+
+The frontend of this portfolio website is built using React. It includes the following components:
+
+- Intro
+- About
+- Experiences
+- Projects
+- Achievements
+- Contact & Links
+
+### Backend
+
+The backend for this portfolio website is built with Node.js and Express. It includes the following features:
+
+- MongoDB Database
+- API Endpoints
+- Login for Admin Panel
+
+### Prerequisites
+
+Make sure you have Node.js installed on your machine. You can download it [here](https://nodejs.org/).
+
+   ```sh
+cd frontend (For Client)
+npm install
+
+(Also for server)
+
+   ```
+
+
+Run npm start and Open http://localhost:3000 to view it in your browser.
 
 
 ### Contact
 
 - [Github](https://github.com/bajpai13)
-- [Gmail](sameerbajpai2806@gmail.com)
+- Gmail - (sameerbajpai2806@gmail.com)
