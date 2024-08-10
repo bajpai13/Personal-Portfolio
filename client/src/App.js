@@ -15,7 +15,9 @@ function App() {
   const getPortfolioData = async () => {
     try {
       dispatch(ShowLoading());
-      const response = await axios.get('/api/portfolio/get-portfolio-data');
+      const response = await axios.get(
+        "https://personal-portfolio-backend-sigma.vercel.app/api/portfolio/get-portfolio-data"
+      );
       dispatch(SetPortfolioData(response.data));
       dispatch(ReloadData(false));
       dispatch(HideLoading());

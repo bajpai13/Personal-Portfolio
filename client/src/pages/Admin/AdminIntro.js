@@ -12,9 +12,13 @@ function AdminIntro() {
     const onFinish = async (values)=>{
         try {
           dispatch(ShowLoading())
-          const response = await axios.post("/api/portfolio/update-intro",{
-            ...values, _id: portfolioData.intro._id,
-          });
+          const response = await axios.post(
+            "https://personal-portfolio-backend-sigma.vercel.app/api/portfolio/update-intro",
+            {
+              ...values,
+              _id: portfolioData.intro._id,
+            }
+          );
           dispatch(HideLoading())
           if(response.data.success){
             message.success(response.data.message);

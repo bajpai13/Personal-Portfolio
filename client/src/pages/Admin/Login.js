@@ -15,7 +15,10 @@ function Login() {
     const login = async () => {
         try {
             dispatch(ShowLoading());
-            const response = await axios.post("/api/portfolio/admin-login",user);
+            const response = await axios.post(
+              "https://personal-portfolio-backend-sigma.vercel.app/api/portfolio/admin-login",
+              user
+            );
             dispatch(HideLoading());
             if(response.data.success){
                 message.success(response.data.message);

@@ -38,13 +38,16 @@ function AdminProjects() {
           : [],
       };
       if (selectedItemForEdit) {
-        response = await axios.post("/api/portfolio/update-project", {
-          ...formattedValues,
-          _id: selectedItemForEdit._id,
-        });
+        response = await axios.post(
+          "https://personal-portfolio-backend-sigma.vercel.app/api/portfolio/update-project",
+          {
+            ...formattedValues,
+            _id: selectedItemForEdit._id,
+          }
+        );
       } else {
         response = await axios.post(
-          "/api/portfolio/add-project",
+          "https://personal-portfolio-backend-sigma.vercel.app/api/portfolio/add-project",
           formattedValues
         );
       }
@@ -66,9 +69,12 @@ function AdminProjects() {
   const onDelete = async (item) => {
     try {
       dispatch(ShowLoading());
-      const response = await axios.post("/api/portfolio/delete-project", {
-        _id: item._id,
-      });
+      const response = await axios.post(
+        "https://personal-portfolio-backend-sigma.vercel.app/api/portfolio/delete-project",
+        {
+          _id: item._id,
+        }
+      );
       dispatch(HideLoading());
       if (response.data.success) {
         message.success(response.data.message);
