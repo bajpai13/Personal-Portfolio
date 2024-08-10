@@ -16,10 +16,10 @@ function Contact() {
             (key) =>
               key !== "_id" && (
                 <h1 key={key} className="ml-12 mt-2">
-                  <span className="text-tertiary text-2xl font-light sm:text-xl">
+                  <span className="text-tertiary text-2xl font-light sm:text-lg sm:ml-4">
                     {key} :{" "}
                   </span>
-                  <span className="text-tertiary text-2xl font-light sm:text-xl">
+                  <span className="text-tertiary text-2xl font-light sm:text-lg sm:mr-4">
                     {contact[key]}
                   </span>
                 </h1>
