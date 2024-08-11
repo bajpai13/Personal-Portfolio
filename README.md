@@ -2,6 +2,8 @@
 
 This is a full stck dynamic portfolio website built with technologies - React, Tailwind CSS, MongoDB, Node JS, Express JS and Ant Design. It showcases my projects, skills, and experiences. The website is fully responsive and designed to provide a seamless user experience.
 
+The website is hosted on Vercel at https://sameer-frontend.vercel.app/
+
 ## Features
 
 - Responsive design
