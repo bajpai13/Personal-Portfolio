@@ -14,7 +14,6 @@ function Courses () {
         <div className="flex flex-col gap-8 border-l-2 border-[#135d4c85] w-1/3 sm:flex-row sm:overflow-x-scroll sm:w-full">
           {courses.map((course, index) => (
             <div
-              
               onClick={() => {
                 setSelectedItemIndex(index);
               }}
@@ -34,14 +33,24 @@ function Courses () {
         </div>
         <div className="flex items-center justify-center gap-10 sm:flex-col">
           <div className="flex flex-col gap-5">
-            <h1 className="text-secondary text-2xl font-md ">
-              {courses[selectedItemIndex].title}
+            <h1 className="text-secondary text-2xl font-md">
+              <a
+                href={courses[selectedItemIndex].link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                {courses[selectedItemIndex].title}
+              </a>
             </h1>
+            <p className="text-white text-lg ">
+              {courses[selectedItemIndex].description}
+            </p>
           </div>
           <img
             src={courses[selectedItemIndex].image}
             alt=""
-            className="h-60 w-72"
+            className="h-60 w-72 object-contain"
           />
         </div>
       </div>

@@ -31,13 +31,39 @@ function Projects  () {
           ))}
         </div>
         <div className="flex items-center justify-center gap-10 sm:flex-col">
-            <img src={projects[selectedItemIndex].image} alt="" className="h-60 w-72" />
+          <img
+            src={projects[selectedItemIndex].image}
+            alt=""
+            className="h-60 w-72 object-contain"
+          />
           <div className="flex flex-col gap-5">
-            <h1 className="text-secondary text-2xl font-md ">
-              {projects[selectedItemIndex].title}
+            <h1 className="text-secondary text-2xl font-md">
+              <a
+                href={projects[selectedItemIndex].link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                {projects[selectedItemIndex].title}
+              </a>
             </h1>
+
             <p className="text-white text-lg ">
               {projects[selectedItemIndex].description}
+            </p>
+            <p className="text-secondary text-lg">
+              {projects[selectedItemIndex].technologies.map((tech, index) => (
+                <span
+                  key={index}
+                  className={`mr-4 ${
+                    index < projects[selectedItemIndex].technologies.length - 1
+                      ? "inline-block"
+                      : ""
+                  }`}
+                >
+                  {tech}
+                </span>
+              ))}
             </p>
           </div>
         </div>
